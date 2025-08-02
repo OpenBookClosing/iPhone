@@ -3,13 +3,19 @@
     {
       "title": "First Attempt",
       "filename": "fail.ogg",
-      "duration": "0:30",
+      "duration": "0:04",
       "icon": "🤫"
     },
     {
-      "title": "Final Message", 
+      "title": "Second Attempt", 
       "filename": "last.ogg",
-      "duration": "1:15",
+      "duration": "1:09",
+      "icon": "💕"
+    },
+    {
+      "title": "Final",
+      "filename": "final.ogg",
+      "duration": "8:52",
       "icon": "💕"
     }
   ]
