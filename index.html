@@ -369,6 +369,19 @@
             align-items: center;
             gap: 5px;
             user-select: none;
+            padding: 10px;
+            margin: -10px;
+            min-width: 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .app-back-btn:hover {
+            opacity: 0.8;
+        }
+
+        .app-back-btn:active {
+            opacity: 0.6;
         }
 
         .app-title {
@@ -430,6 +443,72 @@
 
         .photo-item:hover {
             transform: scale(1.05);
+        }
+
+        /* Memory music player styles */
+        .memory-music-player {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 16px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .memory-music-caption {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .memory-music-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .memory-music-play-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .memory-music-play-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .memory-music-play-btn.playing {
+            background: rgba(255,255,255,0.4);
+        }
+
+        .memory-music-info {
+            flex: 1;
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .memory-music-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .memory-music-artist {
+            font-size: 12px;
+            opacity: 0.7;
         }
 
         .message-list {
@@ -625,6 +704,78 @@
             font-size: 14px;
             font-weight: 600;
             color: #333;
+        }
+
+        /* Memory Detail View Styles */
+        .memory-detail-content {
+            padding: 0;
+        }
+
+        .memory-detail-header {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 20px 10px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .memory-detail-header h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .memory-detail-header p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .memory-pictures-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 20px 20px 20px;
+        }
+
+        .memory-picture-item {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .memory-picture {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .memory-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .memory-picture-caption {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.4;
         }
 
         .contact-card {
@@ -860,6 +1011,436 @@
             background: #f2f2f7;
         }
 
+        .voice-notes-header {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 20px 10px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .voice-notes-header h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .voice-notes-header p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .voice-notes-list {
+            flex: 1;
+            padding: 0 20px 20px 20px;
+        }
+
+        .voice-note-item {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .voice-note-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .voice-note-info {
+            flex: 1;
+        }
+
+        .voice-note-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .voice-note-duration {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .voice-note-play-btn {
+            width: 40px;
+            height: 40px;
+            background: #007aff;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .voice-note-play-btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .voice-note-play-btn.playing {
+            background: #ff3b30;
+        }
+
+        /* My Plan App Styles */
+        .my-plan {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #f2f2f7;
+        }
+
+        .my-plan-header {
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #e5e5ea;
+            text-align: center;
+        }
+
+        .my-plan-header h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .my-plan-header p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .plan-steps {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .plan-step {
+            background: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .plan-step-number {
+            background: #9b59b6;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .plan-step-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .plan-step-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .plan-step-images {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 5px 0;
+        }
+
+        .plan-step-image {
+            min-width: 120px;
+            height: 120px;
+            background: #e5e5ea;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .plan-step-image img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .plan-step-image-caption {
+            font-size: 10px;
+            color: #666;
+            text-align: center;
+            padding: 4px;
+            line-height: 1.2;
+            max-height: 32px;
+            overflow: hidden;
+        }
+
+        .plan-step-image:hover {
+            transform: scale(1.05);
+        }
+
+        .plan-step-status {
+            margin-top: 15px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .plan-step-status.completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .plan-step-status.incomplete {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* Browser App Styles */
+        .browser-interface {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background: #f2f2f7;
+        }
+
+        .browser-tabs {
+            display: flex;
+            background: #e5e5ea;
+            border-bottom: 1px solid #d1d1d6;
+            overflow-x: auto;
+            padding: 0 10px;
+        }
+
+        .browser-tab {
+            min-width: 120px;
+            max-width: 160px;
+            height: 40px;
+            background: white;
+            border: 1px solid #d1d1d6;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            margin: 5px 2px 0 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .browser-tab.active {
+            background: #f2f2f7;
+            border-color: #007aff;
+        }
+
+        .browser-tab:hover {
+            background: #f8f8f8;
+        }
+
+        .tab-title {
+            font-size: 12px;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+        }
+
+        .tab-close {
+            font-size: 16px;
+            color: #666;
+            margin-left: 8px;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+        .tab-close:hover {
+            background: #ff3b30;
+            color: white;
+        }
+
+        .browser-address-bar {
+            height: 44px;
+            background: #f2f2f7;
+            border-bottom: 1px solid #d1d1d6;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            gap: 10px;
+        }
+
+        .browser-url {
+            flex: 1;
+            background: white;
+            border: 1px solid #d1d1d6;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .browser-refresh {
+            width: 30px;
+            height: 30px;
+            background: #007aff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .browser-refresh:hover {
+            background: #0056b3;
+        }
+
+        .browser-notice {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notice-icon {
+            font-size: 14px;
+        }
+
+        .notice-text {
+            font-size: 12px;
+            color: #1976d2;
+            line-height: 1.4;
+        }
+
+        .browser-content {
+            flex: 1;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Domain Ownership Notice Styles */
+        .domain-ownership-notice {
+            padding: 20px;
+            background: white;
+            min-height: 100%;
+        }
+
+        .notice-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+
+        .notice-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .domain-list {
+            margin-bottom: 30px;
+        }
+
+        .domain-list h2 {
+            color: #333;
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .domain-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #007aff;
+        }
+
+        .domain-name {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #007aff;
+            font-size: 16px;
+        }
+
+        .domain-status {
+            font-size: 14px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .ownership-message {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .ownership-message p {
+            margin: 0 0 15px 0;
+            line-height: 1.6;
+        }
+
+        .ownership-message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .romantic-note {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
         .voice-note-player {
             background: white;
             border-radius: 20px;
@@ -1023,8 +1604,8 @@
                 <div class="lock-time" id="lockTime">9:41</div>
                 <div class="lock-date" id="lockDate">Monday, December 25</div>
                 <div class="lock-wallpaper-text">
-                    💕 Her Personal iPhone 💕<br>
-                    Happy 19th Birthday Beautiful!
+                    Aigera's iPhone<br>
+                    Happy 19th Birthday My Love!
                 </div>
                 <div class="unlock-indicator">
                     <span>🔒</span>
@@ -1047,62 +1628,24 @@
                 <div class="passcode-keypad">
                     <div class="passcode-key" onclick="enterPasscode('1')">1</div>
                     <div class="passcode-key" onclick="enterPasscode('2')">2</div>
-                    <div class="passcode-key" onclick="enterPasscode('8')">8</div>
+                    <div class="passcode-key" onclick="enterPasscode('3')">3</div>
+                    <div class="passcode-key" onclick="enterPasscode('4')">4</div>
+                    <div class="passcode-key" onclick="enterPasscode('5')">5</div>
                     <div class="passcode-key" onclick="enterPasscode('6')">6</div>
-                    <div class="passcode-key" onclick="enterPasscode('1')">1</div>
-                    <div class="passcode-key" onclick="enterPasscode('2')">2</div>
                     <div class="passcode-key" onclick="enterPasscode('7')">7</div>
                     <div class="passcode-key" onclick="enterPasscode('8')">8</div>
                     <div class="passcode-key" onclick="enterPasscode('9')">9</div>
-                    <div class="passcode-key delete" onclick="deletePasscode()">Delete</div>
+                    <div class="passcode-key"></div>
                     <div class="passcode-key" onclick="enterPasscode('0')">0</div>
+                    <div class="passcode-key delete" onclick="deletePasscode()">Delete</div>
                 </div>
             </div>
 
             <!-- Home Screen -->
             <div class="home-screen" id="homeScreen">
                 <div class="apps-grid">
-                    <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #ff6b6b, #feca57);" onclick="openApp('photos')">
-                            <span>📸</span>
-                        </div>
-                        <div class="app-label">Our Photos</div>
-                    </div>
                     
-                    <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #48dbfb, #0abde3);" onclick="openApp('messages')">
-                            <span>💬</span>
-                        </div>
-                        <div class="app-label">Sweet Messages</div>
-                    </div>
                     
-                    <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #ff9ff3, #f368e0);" onclick="openApp('music')">
-                            <span>🎵</span>
-                        </div>
-                        <div class="app-label">Our Songs</div>
-                    </div>
-                    
-                    <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #54a0ff, #2e86de);" onclick="openApp('notes')">
-                            <span>📝</span>
-                        </div>
-                        <div class="app-label">Love Notes</div>
-                    </div>
-                    
-                    <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #5f27cd, #341f97);" onclick="openApp('love-letter')">
-                            <span>💕</span>
-                        </div>
-                        <div class="app-label">Love Letter</div>
-                    </div>
-                    
-                    <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #feca57, #ff9ff3);" onclick="openApp('birthday')">
-                            <span>🎂</span>
-                        </div>
-                        <div class="app-label">Birthday</div>
-                    </div>
                     
                     <div class="app-container">
                         <div class="app-icon" style="background: linear-gradient(45deg, #ff6b6b, #ee5a52);" onclick="openApp('memories')">
@@ -1111,11 +1654,12 @@
                         <div class="app-label">Memories</div>
                     </div>
                     
+                    
                     <div class="app-container">
-                        <div class="app-icon" style="background: linear-gradient(45deg, #0abde3, #48dbfb);" onclick="openApp('contact')">
-                            <span>👤</span>
+                        <div class="app-icon" style="background: linear-gradient(45deg, #9b59b6, #8e44ad);" onclick="openApp('my-plan')">
+                            <span>📋</span>
                         </div>
-                        <div class="app-label">My Love</div>
+                        <div class="app-label">My Plan</div>
                     </div>
                     
                     <div class="app-container">
@@ -1131,14 +1675,8 @@
                     <div class="dock-app" style="background: linear-gradient(45deg, #1dd1a1, #10ac84);" onclick="openApp('phone')">
                         <span>📞</span>
                     </div>
-                    <div class="dock-app" style="background: linear-gradient(45deg, #ff6b6b, #ee5a52);" onclick="openApp('heart')">
-                        <span>❤️</span>
-                    </div>
-                    <div class="dock-app" style="background: linear-gradient(45deg, #feca57, #ff9ff3);" onclick="openApp('camera')">
-                        <span>📷</span>
-                    </div>
-                    <div class="dock-app" style="background: linear-gradient(45deg, #54a0ff, #2e86de);" onclick="openApp('settings')">
-                        <span>⚙️</span>
+                    <div class="dock-app" style="background: linear-gradient(45deg, #007aff, #0056b3);" onclick="openApp('browser')">
+                        <span>🌐</span>
                     </div>
                 </div>
             </div>
@@ -1164,7 +1702,7 @@
                 <div class="caller-info">
                     <div class="caller-avatar">🎂</div>
                     <div class="caller-name">19 Years Old</div>
-                    <div class="caller-number">Special Birthday Call</div>
+                    <div class="caller-number">From - Your Bunny</div>
                 </div>
                 <div class="call-actions">
                     <button class="call-button decline-btn" onclick="declineCall()">
@@ -1177,154 +1715,11 @@
             </div>
 
             <!-- App Screens -->
-            <div class="app-screen" id="photosApp">
-                <div class="app-header">
-                    <div class="app-back-btn" onclick="closeApp()">
-                        <span>←</span>
-                        <span>Back</span>
-                    </div>
-                    <div class="app-title">Our Photos</div>
-                </div>
-                <div class="app-content">
-                    <div class="photos-grid">
-                        <div class="photo-item" onclick="showNotification('First Date', 'That magical first date photo! 💕')">📸</div>
-                        <div class="photo-item" onclick="showNotification('Selfie Time', 'Our cute selfie together! 😊')">🤳</div>
-                        <div class="photo-item" onclick="showNotification('Sunset', 'Watching the sunset together 🌅')">🌅</div>
-                        <div class="photo-item" onclick="showNotification('Birthday Girl', 'Happy birthday beautiful! 🎂')">🎂</div>
-                        <div class="photo-item" onclick="showNotification('Adventure', 'Our fun adventure day! 🗺️')">🗺️</div>
-                        <div class="photo-item" onclick="showNotification('Cuddles', 'Cozy cuddle time together 🤗')">🤗</div>
-                        <div class="photo-item" onclick="showNotification('Surprise', 'That surprise I planned for you! 🎁')">🎁</div>
-                        <div class="photo-item" onclick="showNotification('Laughing', 'You laughing at my jokes! 😄')">😄</div>
-                        <div class="photo-item" onclick="showNotification('Love', 'Pure love in this photo 💖')">💖</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="app-screen" id="messagesApp">
-                <div class="app-header">
-                    <div class="app-back-btn" onclick="closeApp()">
-                        <span>←</span>
-                        <span>Back</span>
-                    </div>
-                    <div class="app-title">Sweet Messages</div>
-                </div>
-                <div class="app-content">
-                    <div class="message-list">
-                        <div class="message-item" onclick="showNotification('Good Morning', 'Good morning beautiful! Hope your day is as amazing as you are! 🌞💕')">
-                            <div class="message-sender">My Love</div>
-                            <div class="message-preview">Good morning beautiful! Hope your day is as amazing as you are! 🌞</div>
-                        </div>
-                        <div class="message-item" onclick="showNotification('Thinking of You', 'Just wanted to let you know I am thinking of you and smiling! 😊💭')">
-                            <div class="message-sender">My Love</div>
-                            <div class="message-preview">Just wanted to let you know I'm thinking of you and smiling! 😊</div>
-                        </div>
-                        <div class="message-item" onclick="showNotification('Birthday Wishes', 'Happy 19th birthday to the most incredible girl in the world! 🎂🎉')">
-                            <div class="message-sender">My Love</div>
-                            <div class="message-preview">Happy 19th birthday to the most incredible girl in the world! 🎂</div>
-                        </div>
-                        <div class="message-item" onclick="showNotification('Love You', 'I love you more than words can express. You mean everything to me! 💕💖')">
-                            <div class="message-sender">My Love</div>
-                            <div class="message-preview">I love you more than words can express. You mean everything to me! 💕</div>
-                        </div>
-                        <div class="message-item" onclick="showNotification('Sweet Dreams', 'Sweet dreams my angel. Cannot wait to see you tomorrow! 😴💤')">
-                            <div class="message-sender">My Love</div>
-                            <div class="message-preview">Sweet dreams my angel. Can't wait to see you tomorrow! 😴</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="app-screen" id="musicApp">
-                <div class="app-header">
-                    <div class="app-back-btn" onclick="closeApp()">
-                        <span>←</span>
-                        <span>Back</span>
-                    </div>
-                    <div class="app-title">Our Songs</div>
-                </div>
-                <div class="app-content">
-                    <div class="music-player">
-                        <div class="album-art">🎵</div>
-                        <div class="song-title">Our Song</div>
-                        <div class="song-artist">The song that reminds me of you</div>
-                        <div class="music-controls">
-                            <button class="music-btn" onclick="showNotification('Previous', 'Playing our previous favorite song! 🎵')">⏮️</button>
-                            <button class="music-btn play" onclick="showNotification('Now Playing', 'Playing our special song that always makes me think of you! 💕🎵')">▶️</button>
-                            <button class="music-btn" onclick="showNotification('Next', 'Playing the next song in our playlist! 🎵')">⏭️</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="app-screen" id="notesApp">
-                <div class="app-header">
-                    <div class="app-back-btn" onclick="closeApp()">
-                        <span>←</span>
-                        <span>Back</span>
-                    </div>
-                    <div class="app-title">Love Notes</div>
-                </div>
-                <div class="app-content">
-                    <div class="notes-editor">
-                        <textarea class="notes-textarea" placeholder="Write your thoughts here..." readonly>💕 Quick Love Notes 💕
 
-🎂 It's your 19th birthday today!
-💖 You make every day brighter
-🌟 Your smile is my favorite thing
-💕 I love how you laugh at my jokes
-🎉 Today is all about celebrating YOU
-💝 You deserve all the happiness
-🌹 You're beautiful inside and out
-💫 My heart belongs to you
-🎈 Let's make this birthday unforgettable
-💍 Forever and always, you're my everything
 
-Every note I write is filled with love for you! 💕</textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="app-screen" id="loveLetterApp">
-                <div class="app-header">
-                    <div class="app-back-btn" onclick="closeApp()">
-                        <span>←</span>
-                        <span>Back</span>
-                    </div>
-                    <div class="app-title">Love Letter</div>
-                </div>
-                <div class="app-content">
-                    <div class="love-letter">
-                        <h3>💕 To My Beautiful Birthday Girl 💕</h3>
-                        <p>My dearest love,</p>
-                        <p>Today you turn 19, and I couldn't be more excited to celebrate the incredible person you are. Every day with you feels like a gift, but today is extra special because it's all about YOU.</p>
-                        <p>You light up my world in ways I never imagined possible. Your kindness, your laughter, your beautiful heart - everything about you makes me fall in love all over again, every single day.</p>
-                        <p>I'm so proud of who you've become and so grateful to be part of your journey. You inspire me to be better, to love deeper, and to appreciate every moment we share together.</p>
-                        <p>On your special day, I want you to know that you are loved beyond measure. You are my sunshine, my happiness, and my forever person.</p>
-                        <p>Happy 19th Birthday, my beautiful girl! Here's to another year of love, laughter, and endless adventures together.</p>
-                        <p>With all my love,<br>Your devoted boyfriend 💕</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="app-screen" id="birthdayApp">
-                <div class="app-header">
-                    <div class="app-back-btn" onclick="closeApp()">
-                        <span>←</span>
-                        <span>Back</span>
-                    </div>
-                    <div class="app-title">Birthday Celebration</div>
-                </div>
-                <div class="app-content">
-                    <div class="countdown-display">
-                        <div class="countdown-number">🎉</div>
-                        <div class="countdown-label">IT'S YOUR BIRTHDAY!</div>
-                        <div class="birthday-message">
-                            Happy 19th Birthday to the most amazing girl in the world! 🎂✨
-                            Today is all about celebrating YOU and how incredible you are! 💕
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="app-screen" id="memoriesApp">
                 <div class="app-header">
@@ -1336,50 +1731,179 @@ Every note I write is filled with love for you! 💕</textarea>
                 </div>
                 <div class="app-content">
                     <div class="memories-grid">
-                        <div class="memory-card" onclick="showNotification('First Date', 'Our magical first date! I was so nervous but you made me feel at ease. 💕')">
-                            <div class="memory-icon">💕</div>
-                            <div class="memory-title">First Date</div>
+                        <div class="memory-card" onclick="openMemoryDetail('days-before-meeting')">
+                            <div class="memory-icon">🕐</div>
+                            <div class="memory-title">Days before meeting</div>
                         </div>
-                        <div class="memory-card" onclick="showNotification('First Kiss', 'The moment that changed everything. Under the stars, perfect timing! 💋')">
-                            <div class="memory-icon">💋</div>
-                            <div class="memory-title">First Kiss</div>
+                        <div class="memory-card" onclick="openMemoryDetail('first-time-prague')">
+                            <div class="memory-icon">🏰</div>
+                            <div class="memory-title">First time in Prague</div>
                         </div>
-                        <div class="memory-card" onclick="showNotification('First I Love You', 'Those three words that mean everything. Your reaction was perfect! 💖')">
-                            <div class="memory-icon">💖</div>
-                            <div class="memory-title">First I Love You</div>
+                        <div class="memory-card" onclick="openMemoryDetail('first-car-together')">
+                            <div class="memory-icon">🚗</div>
+                            <div class="memory-title">First time in car together</div>
                         </div>
-                        <div class="memory-card" onclick="showNotification('Adventures', 'All our fun adventures together! Every moment is special with you. 🗺️')">
-                            <div class="memory-icon">🗺️</div>
-                            <div class="memory-title">Adventures</div>
+                        <div class="memory-card" onclick="openMemoryDetail('first-tiktok')">
+                            <div class="memory-icon">📱</div>
+                            <div class="memory-title">First TikTok</div>
                         </div>
-                        <div class="memory-card" onclick="showNotification('Lazy Days', 'Those perfect lazy days just cuddling and being together. 😴')">
-                            <div class="memory-icon">😴</div>
-                            <div class="memory-title">Lazy Days</div>
+                        <div class="memory-card" onclick="openMemoryDetail('date-foggy-prague')">
+                            <div class="memory-icon">🌫️</div>
+                            <div class="memory-title">Date at Foggy, Prague</div>
                         </div>
-                        <div class="memory-card" onclick="showNotification('Inside Jokes', 'All our silly inside jokes that make us laugh until our stomachs hurt! 😄')">
-                            <div class="memory-icon">😄</div>
-                            <div class="memory-title">Inside Jokes</div>
+                        <div class="memory-card" onclick="openMemoryDetail('thailand')">
+                            <div class="memory-icon">🏝️</div>
+                            <div class="memory-title">Thailand</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('europa-park')">
+                            <div class="memory-icon">🎢</div>
+                            <div class="memory-title">Europa park</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('washing-cars')">
+                            <div class="memory-icon">🚙</div>
+                            <div class="memory-title">Washing Cars</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('valencia')">
+                            <div class="memory-icon">🇪🇸</div>
+                            <div class="memory-title">Valencia</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('karlovy-vary')">
+                            <div class="memory-icon">♨️</div>
+                            <div class="memory-title">Karlovy Vary</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('qatar')">
+                            <div class="memory-icon">🏛️</div>
+                            <div class="memory-title">Qatar</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('museum-prague')">
+                            <div class="memory-icon">🎨</div>
+                            <div class="memory-title">Museum in Prague</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('high-together')">
+                            <div class="memory-icon">☁️</div>
+                            <div class="memory-title">High together</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('random-prague-pics')">
+                            <div class="memory-icon">📷</div>
+                            <div class="memory-title">Random Prague pics</div>
+                        </div>
+                        <div class="memory-card" onclick="openMemoryDetail('first-chat')">
+                            <div class="memory-icon">💬</div>
+                            <div class="memory-title">First Chat</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="app-screen" id="contactApp">
+            <!-- Memory Detail View -->
+            <div class="app-screen" id="memoryDetailApp">
+                <div class="app-header">
+                    <div class="app-back-btn" onclick="backToMemories()">
+                        <span>←</span>
+                        <span>Back</span>
+                    </div>
+                    <div class="app-title" id="memoryDetailTitle">Memory</div>
+                </div>
+                <div class="app-content">
+                    <div class="memory-detail-content" id="memoryDetailContent">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Browser App -->
+            <div class="app-screen" id="browserApp">
                 <div class="app-header">
                     <div class="app-back-btn" onclick="closeApp()">
                         <span>←</span>
                         <span>Back</span>
                     </div>
-                    <div class="app-title">My Love</div>
+                    <div class="app-title">Safari</div>
                 </div>
                 <div class="app-content">
-                    <div class="contact-card">
-                        <div class="contact-avatar">💕</div>
-                        <div class="contact-name">My Beautiful Girlfriend</div>
-                        <div class="contact-info">The most amazing person in the world<br>Birthday: Today! 🎂</div>
-                        <div class="contact-actions">
-                            <button class="contact-btn" onclick="showNotification('Call', 'Calling the most beautiful voice in the world! 📞💕')">📞 Call</button>
-                            <button class="contact-btn" onclick="showNotification('Message', 'Sending you all my love through this message! 💌💕')">💌 Message</button>
+                    <div class="browser-interface">
+                        <!-- Tab Bar -->
+                        <div class="browser-tabs">
+                            <div class="browser-tab active" onclick="switchTab(0)" data-tab="0">
+                                <span class="tab-title">aigera.party</span>
+                                <span class="tab-close">×</span>
+                            </div>
+                            <div class="browser-tab" onclick="switchTab(1)" data-tab="1">
+                                <span class="tab-title">aigera.love</span>
+                                <span class="tab-close">×</span>
+                            </div>
+                            <div class="browser-tab" onclick="switchTab(2)" data-tab="2">
+                                <span class="tab-title">aigera.baby</span>
+                                <span class="tab-close">×</span>
+                            </div>
+                            <div class="browser-tab" onclick="switchTab(3)" data-tab="3">
+                                <span class="tab-title">aigera.net</span>
+                                <span class="tab-close">×</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Address Bar -->
+                        <div class="browser-address-bar">
+                            <div class="browser-url" id="browserUrl">https://aigera.party</div>
+                            <div class="browser-refresh">⟳</div>
+                        </div>
+                        
+                        <!-- Real URLs Notice -->
+                        <div class="browser-notice">
+                            <span class="notice-icon">ℹ️</span>
+                            <span class="notice-text">These website URLs are owned by me, and I will always own them (yes you can access them on normal safari :))</span>
+                        </div>
+                        
+                        <!-- Content Area -->
+                        <div class="browser-content" id="browserContent">
+                            <div class="domain-ownership-notice">
+                                <div class="notice-header">
+                                    <h1>🌐 Domain Information</h1>
+                                </div>
+                                <div class="notice-body">
+                                    <div class="domain-list">
+                                        <h2>These domains are owned by us:</h2>
+                                        <div class="domain-item">
+                                            <span class="domain-name">aigera.party</span>
+                                            <span class="domain-status">✅ Active</span>
+                                        </div>
+                                        <div class="domain-item">
+                                            <span class="domain-name">aigera.love</span>
+                                            <span class="domain-status">✅ Active</span>
+                                        </div>
+                                        <div class="domain-item">
+                                            <span class="domain-name">aigera.baby</span>
+                                            <span class="domain-status">✅ Active</span>
+                                        </div>
+                                        <div class="domain-item">
+                                            <span class="domain-name">aigera.net</span>
+                                            <span class="domain-status">✅ Active</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-screen" id="my-planApp">
+                <div class="app-header">
+                    <div class="app-back-btn" onclick="closeApp()">
+                        <span>←</span>
+                        <span>Back</span>
+                    </div>
+                    <div class="app-title">My Plan</div>
+                </div>
+                <div class="app-content">
+                    <div class="my-plan">
+                        <div class="my-plan-header">
+                            <h3>How I Made This</h3>
+                            <p>The behind-the-scenes journey of creating your birthday surprise</p>
+                        </div>
+                        
+                        <div class="plan-steps" id="planSteps">
+                            <!-- Steps will be dynamically populated -->
                         </div>
                     </div>
                 </div>
@@ -1395,28 +1919,13 @@ Every note I write is filled with love for you! 💕</textarea>
                 </div>
                 <div class="app-content">
                     <div class="voice-notes">
-                        <div class="voice-note-player">
-                            <div class="voice-note-avatar">🎂</div>
-                            <div class="voice-note-title">Birthday Message</div>
-                            <div class="voice-note-subtitle">From: 19 Years Old</div>
-                            
-                            <div class="voice-waveform" id="waveform">
-                                <!-- Waveform bars will be generated by JavaScript -->
-                            </div>
-                            
-                            <div class="voice-controls">
-                                <button class="voice-btn" onclick="seekBackward()">⏪</button>
-                                <button class="voice-btn play" id="playBtn" onclick="togglePlayback()">▶️</button>
-                                <button class="voice-btn" onclick="seekForward()">⏩</button>
-                            </div>
-                            
-                            <div class="voice-time" id="voiceTime">0:00 / 0:00</div>
-                            
-                            <div class="voice-message">
-                                🎉 Happy 19th Birthday! 🎉<br>
-                                This is a special birthday message just for you!<br>
-                                💕 You are amazing and so loved! 💕
-                            </div>
+                        <div class="voice-notes-header">
+                            <h3>Voice Notes</h3>
+                            <p>Here is some of the many attempts to secretly make a voicenote for you while you slept</p>
+                        </div>
+                        
+                        <div class="voice-notes-list" id="voiceNotesList">
+                            <!-- Voice notes will be dynamically populated -->
                         </div>
                     </div>
                 </div>
@@ -1433,7 +1942,54 @@ Every note I write is filled with love for you! 💕</textarea>
         let voiceMessageAudio = null;
         let startTime = null;
         let isPlaying = false;
+        let currentVoiceNoteIndex = 0;
+        let voiceNotes = [];
         
+        // Function to load voice notes from JSON
+        async function loadVoiceNotes() {
+            try {
+                console.log('Loading voice notes...');
+                const response = await fetch('voicenotes/index.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load voice notes index.json');
+                }
+                
+                const data = await response.json();
+                console.log('Voice notes data loaded:', data);
+                
+                voiceNotes = data.voicenotes.map(note => ({
+                    title: note.title,
+                    duration: note.duration,
+                    file: `voicenotes/${note.filename}`,
+                    icon: note.icon
+                }));
+                
+                console.log('Voice notes array:', voiceNotes);
+                
+                // Initialize the voice notes list after loading
+                initializeVoiceNotes();
+            } catch (error) {
+                console.error('Error loading voice notes:', error);
+                // Fallback to hardcoded data for local development (CORS issues)
+                console.log('Using fallback voice notes data');
+                voiceNotes = [
+                    {
+                        title: "First Attempt",
+                        duration: "0:30",
+                        file: "voicenotes/fail.ogg",
+                        icon: "🤫"
+                    },
+                    {
+                        title: "Final Message",
+                        duration: "1:15",
+                        file: "voicenotes/last.ogg",
+                        icon: "💕"
+                    }
+                ];
+                initializeVoiceNotes();
+            }
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             updateTime();
@@ -1447,14 +2003,14 @@ Every note I write is filled with love for you! 💕</textarea>
             
             // Show welcome notification after unlock
             setTimeout(() => {
-                showNotification('Welcome!', 'Welcome to your personalized iPhone! Happy 19th Birthday! 🎉💕');
+                showNotification('My Bunny', 'Hi Aigera, its travis, HAPPY BIRTHDAY!');
             }, 2000);
             
             // Start checking for call trigger
             checkForCall();
             
-            // Initialize voice note waveform
-            initializeWaveform();
+            // Load and initialize voice notes
+            loadVoiceNotes();
         });
 
         function updateTime() {
@@ -1552,6 +2108,11 @@ Every note I write is filled with love for you! 💕</textarea>
                 document.getElementById('homeScreen').classList.remove('show');
                 document.getElementById(appName + 'App').classList.add('show');
                 currentApp = appName;
+                
+                // Initialize specific apps
+                if (appName === 'my-plan') {
+                    initializeMyPlan();
+                }
             }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds
         }
 
@@ -1613,9 +2174,12 @@ Every note I write is filled with love for you! 💕</textarea>
             }
         });
 
-        // Prevent default scrolling
+        // Prevent default scrolling only on specific elements
         document.addEventListener('touchmove', function(e) {
-            e.preventDefault();
+            // Only prevent scrolling on the main iPhone screen, not on interactive elements
+            if (e.target.closest('.iphone-screen') && !e.target.closest('.app-back-btn, .passcode-key, .app-icon, .dock-app, .photo-item, .message-item, .memory-card, .contact-btn, .music-btn, .voice-btn, .call-button')) {
+                e.preventDefault();
+            }
         }, { passive: false });
         
         // Call functionality
@@ -1701,7 +2265,36 @@ Every note I write is filled with love for you! 💕</textarea>
         function declineCall() {
             stopRingtone();
             document.getElementById('incomingCall').classList.remove('show');
-            showNotification('Missed Call', 'You missed a special birthday call! 📞');
+            showNotification('Missed Call', 'You missed my call :(');
+        }
+        
+        function initializeVoiceNotes() {
+            console.log('Initializing voice notes, count:', voiceNotes.length);
+            const voiceNotesList = document.getElementById('voiceNotesList');
+            
+            if (!voiceNotesList) {
+                console.error('voiceNotesList element not found!');
+                return;
+            }
+            
+            voiceNotesList.innerHTML = '';
+            
+            voiceNotes.forEach((note, index) => {
+                console.log(`Adding voice note ${index}:`, note);
+                const noteElement = document.createElement('div');
+                noteElement.className = 'voice-note-item';
+                noteElement.innerHTML = `
+                    <div class="voice-note-icon">${note.icon}</div>
+                    <div class="voice-note-info">
+                        <div class="voice-note-title">${note.title}</div>
+                        <div class="voice-note-duration">${note.duration}</div>
+                    </div>
+                    <button class="voice-note-play-btn" onclick="playVoiceNote(${index})">▶️</button>
+                `;
+                voiceNotesList.appendChild(noteElement);
+            });
+            
+            console.log('Voice notes initialized, DOM children:', voiceNotesList.children.length);
         }
         
         function openVoiceNotesApp() {
@@ -1715,106 +2308,778 @@ Every note I write is filled with love for you! 💕</textarea>
             document.getElementById('voice-notesApp').classList.add('show');
             currentApp = 'voice-notes';
             
-            // Auto-play the voice message
+            // Ensure voice notes are displayed
+            initializeVoiceNotes();
+            
+            // Auto-play the first voice note
             setTimeout(() => {
-                playVoiceMessage();
+                playSequentialVoiceNotes();
             }, 1000);
         }
         
-        function initializeWaveform() {
-            const waveform = document.getElementById('waveform');
-            for (let i = 0; i < 40; i++) {
-                const bar = document.createElement('div');
-                bar.className = 'waveform-bar';
-                bar.style.height = (Math.random() * 30 + 10) + 'px';
-                waveform.appendChild(bar);
-            }
+        function playSequentialVoiceNotes() {
+            currentVoiceNoteIndex = 0;
+            playVoiceNote(0, true);
         }
         
-        function playVoiceMessage() {
-            // Create audio element for the voice message
-            voiceMessageAudio = new Audio('https://cdn.pixabay.com/download/audio/2022/02/11/audio_25f3f87b24.mp3?filename=random-thoughts-20586.mp3');
+        function playVoiceNote(index, isSequential = false) {
+            if (voiceMessageAudio) {
+                voiceMessageAudio.pause();
+                voiceMessageAudio = null;
+            }
             
-            voiceMessageAudio.addEventListener('loadedmetadata', function() {
-                const duration = formatTime(voiceMessageAudio.duration);
-                document.getElementById('voiceTime').textContent = `0:00 / ${duration}`;
+            // Reset all play buttons
+            document.querySelectorAll('.voice-note-play-btn').forEach(btn => {
+                btn.textContent = '▶️';
+                btn.classList.remove('playing');
             });
             
-            voiceMessageAudio.addEventListener('timeupdate', function() {
-                const current = formatTime(voiceMessageAudio.currentTime);
-                const duration = formatTime(voiceMessageAudio.duration);
-                document.getElementById('voiceTime').textContent = `${current} / ${duration}`;
-                
-                // Animate waveform
-                animateWaveform();
-            });
+            const note = voiceNotes[index];
+            const playButton = document.querySelectorAll('.voice-note-play-btn')[index];
+            
+            // Create audio element for the voice note
+            voiceMessageAudio = new Audio(note.file);
             
             voiceMessageAudio.addEventListener('ended', function() {
-                document.getElementById('playBtn').textContent = '▶️';
+                playButton.textContent = '▶️';
+                playButton.classList.remove('playing');
                 isPlaying = false;
-                stopWaveformAnimation();
                 
-                // Return to home screen after audio ends
-                setTimeout(() => {
-                    closeApp();
-                }, 2000);
+                if (isSequential) {
+                    // Play next voice note
+                    currentVoiceNoteIndex++;
+                    if (currentVoiceNoteIndex < voiceNotes.length) {
+                        setTimeout(() => {
+                            playVoiceNote(currentVoiceNoteIndex, true);
+                        }, 1000);
+                    } else {
+                        // All voice notes finished, close app
+                        setTimeout(() => {
+                            closeApp();
+                        }, 2000);
+                    }
+                }
+            });
+            
+            voiceMessageAudio.addEventListener('error', function() {
+                // If audio file doesn't exist, show notification and continue
+                showNotification('Audio Error', `Could not load ${note.title}. Make sure ${note.file} exists.`);
+                playButton.textContent = '▶️';
+                playButton.classList.remove('playing');
+                
+                if (isSequential) {
+                    currentVoiceNoteIndex++;
+                    if (currentVoiceNoteIndex < voiceNotes.length) {
+                        setTimeout(() => {
+                            playVoiceNote(currentVoiceNoteIndex, true);
+                        }, 1000);
+                    } else {
+                        setTimeout(() => {
+                            closeApp();
+                        }, 2000);
+                    }
+                }
             });
             
             voiceMessageAudio.play();
-            document.getElementById('playBtn').textContent = '⏸️';
+            playButton.textContent = '⏸️';
+            playButton.classList.add('playing');
             isPlaying = true;
-        }
-        
-        function togglePlayback() {
-            if (!voiceMessageAudio) {
-                playVoiceMessage();
-                return;
-            }
-            
-            if (isPlaying) {
-                voiceMessageAudio.pause();
-                document.getElementById('playBtn').textContent = '▶️';
-                isPlaying = false;
-                stopWaveformAnimation();
-            } else {
-                voiceMessageAudio.play();
-                document.getElementById('playBtn').textContent = '⏸️';
-                isPlaying = true;
-            }
-        }
-        
-        function seekBackward() {
-            if (voiceMessageAudio) {
-                voiceMessageAudio.currentTime = Math.max(0, voiceMessageAudio.currentTime - 10);
-            }
-        }
-        
-        function seekForward() {
-            if (voiceMessageAudio) {
-                voiceMessageAudio.currentTime = Math.min(voiceMessageAudio.duration, voiceMessageAudio.currentTime + 10);
-            }
-        }
-        
-        function animateWaveform() {
-            const bars = document.querySelectorAll('.waveform-bar');
-            bars.forEach(bar => {
-                if (Math.random() > 0.7) {
-                    bar.style.height = (Math.random() * 40 + 10) + 'px';
-                }
-            });
-        }
-        
-        function stopWaveformAnimation() {
-            const bars = document.querySelectorAll('.waveform-bar');
-            bars.forEach(bar => {
-                bar.style.height = '20px';
-            });
         }
         
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
             const secs = Math.floor(seconds % 60);
             return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // My Plan App Functions
+        const planSteps = [
+            {
+                number: 1,
+                title: "Bought the Domains",
+                description: "I bought the domains so our love will forever exist, somewhere:",
+                details: ["aigera.party", "aigera.net", "aigera.love", "aigera.baby", "aigera.ag - this one is older"],
+                folder: "step1-domains",
+                status: "completed"
+            },
+            {
+                number: 2,
+                title: "The Midnight Call Idea",
+                description: "I began brainstorming how to create something truly unique. I thought of an idea where you would be on the app and when the clock struck 12:00 you'd receive a 'call' on the website, which would play a voicenote.",
+                details: ["Wanted something magical for your birthday moment", "Planned a surprise call at midnight", "But I knew your friends would come at 12:00", "This timing issue became a problem to solve"],
+                folder: "step2-midnight-call",
+                status: "completed"
+            },
+            {
+                number: 3,
+                title: "Crawled Through Our Pictures",
+                description: "I decided to crawl through hundreds of our pictures, get some of the main ones and split them into categories, with captions for each.",
+                details: ["Went through hundreds of our photos", "Selected the most meaningful moments", "Organized them into categories", "Wrote personal captions for each memory"],
+                folder: "step3-photos",
+                status: "completed"
+            },
+            {
+                number: 4,
+                title: "Building the Complex App",
+                description: "At this point honestly I was slowly running out of time, building the app and getting it working took a very long time, simulating the phone on a website is quite complex.",
+                details: ["iPhone simulation is incredibly complex", "Every detail had to be perfect", "Touch gestures, animations, realistic interface", "Much harder than I initially thought"],
+                folder: "step4-building",
+                status: "completed"
+            },
+            {
+                number: 5,
+                title: "Time Running Out",
+                description: "There was only 30 hours or so until your birthday, I knew with the things we were doing and the fact I wanted to keep it secret, that time would be very tight.",
+                details: ["Only 30 hours left until your birthday", "Had to keep everything completely secret", "Balancing time with you and development", "Pressure was building with each hour"],
+                folder: "step5-time-pressure",
+                status: "completed"
+            },
+            {
+                number: 6,
+                title: "The Difficult Decision",
+                description: "As time was ticking and the time was coming closer I decided to postpone the app as I wouldn't present it to you unless it was perfect and completely issue-free.",
+                details: ["Chose quality over deadline", "Wouldn't give you anything less than perfect", "Made the hard decision to cancel", "Did not want to give you something 'broken'"],
+                folder: "step6-postponement",
+                status: "incomplete"
+            }
+        ];
+
+        // Function to load images from plan step folder
+        async function loadPlanStepImages(folderName) {
+            try {
+                const response = await fetch(`my-plan-images/${folderName}/index.json`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load index.json for ${folderName}`);
+                }
+                
+                const data = await response.json();
+                const images = [];
+                
+                for (const imageData of data.images) {
+                    images.push({
+                        src: `my-plan-images/${folderName}/${imageData.filename}`,
+                        caption: imageData.caption
+                    });
+                }
+                
+                return images;
+            } catch (error) {
+                console.error(`Error loading plan step images for ${folderName}:`, error);
+                // Fallback for local development (CORS issues)
+                return getPlanStepFallbackData(folderName);
+            }
+        }
+
+        // Fallback data for My Plan app
+        function getPlanStepFallbackData(folderName) {
+            const fallbackData = {
+                'step6-postponement': [
+                    {
+                        src: `my-plan-images/${folderName}/project_creation.png`,
+                        caption: 'Decided on mobile simulation on 16th'
+                    },
+                    {
+                        src: `my-plan-images/${folderName}/wouldnt_present_imperfect.png`,
+                        caption: 'Wouldn\'t present anything less than perfect'
+                    },
+                    {
+                        src: `my-plan-images/${folderName}/better_late_than_broken.jpg`,
+                        caption: 'Better late and flawless than rushed and broken'
+                    }
+                ]
+            };
+            
+            return fallbackData[folderName] || [];
+        }
+
+        async function initializeMyPlan() {
+            const planStepsContainer = document.getElementById('planSteps');
+            if (!planStepsContainer) return;
+            
+            planStepsContainer.innerHTML = '';
+            
+            for (const step of planSteps) {
+                const stepElement = document.createElement('div');
+                stepElement.className = 'plan-step';
+                
+                const detailsList = step.details.map(detail => `<li>${detail}</li>`).join('');
+                
+                // Load images for this step
+                const images = await loadPlanStepImages(step.folder);
+                const imagesList = images.map(image => `
+                    <div class="plan-step-image">
+                        <img src="${image.src}" alt="${image.caption}" onerror="this.style.display='none'">
+                        <div class="plan-step-image-caption">${image.caption}</div>
+                    </div>
+                `).join('');
+                
+                stepElement.innerHTML = `
+                    <div class="plan-step-number">${step.number}</div>
+                    <div class="plan-step-title">${step.title}</div>
+                    <div class="plan-step-description">${step.description}</div>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #666;">
+                        ${detailsList}
+                    </ul>
+                    <div class="plan-step-images">
+                        ${imagesList}
+                    </div>
+                    <div class="plan-step-status ${step.status}">
+                        ${step.status === 'completed' ? '✅ Completed' : '❌ Incomplete'}
+                    </div>
+                `;
+                
+                planStepsContainer.appendChild(stepElement);
+            }
+        }
+
+        // Memory Detail Functions
+        const memoryData = {
+            'days-before-meeting': {
+                title: 'Days before meeting',
+                description: 'Anticipating the big day...',
+                folder: 'days-before-meeting'
+            },
+            'first-time-prague': {
+                title: 'First time in Prague',
+                description: 'My first time visiting you, after months of talking on snapchat almost daily, with hundreds of hours of phonecalls.',
+                folder: 'first-time-prague'
+            },
+            'first-car-together': {
+                title: 'First time in car together',
+                description: 'Rented the Q3, you initially were super against the idea (to save money), but the music and discussions in the car made it worth every penny.',
+                folder: 'first-car-together'
+            },
+            'first-tiktok': {
+                title: 'First TikTok',
+                description: 'Some of our first tiktoks in public, just randomly on the streets of Prague late at night.',
+                folder: 'first-tiktok'
+            },
+            'date-foggy-prague': {
+                title: 'Date at Foggy, Prague',
+                description: 'Shisha & food',
+                folder: 'date-foggy-prague'
+            },
+            'thailand': {
+                title: 'Thailand',
+                description: 'To this day one of our best trips together, you integrated with my friends well - this is a trip to always remember, as so much happened.',
+                folder: 'thailand'
+            },
+            'europa-park': {
+                title: 'Europa park',
+                description: 'Our theme park visit & exploration of Germany/France',
+                folder: 'europa-park'
+            },
+            'washing-cars': {
+                title: 'Washing Cars',
+                description: 'Ive never seen someone so excited to wash a car, and you kno what? fuck yes, because I love doing it too.',
+                folder: 'washing-cars'
+            },
+            'valencia': {
+                title: 'Valencia',
+                description: 'First time you met Josh and Kieron, and my first time meeting Roma n his friends',
+                folder: 'valencia'
+            },
+            'karlovy-vary': {
+                title: 'Karlovy Vary',
+                description: 'This was your idea, and it was a very good one at that. The drive was long, almost 3 hours, but every moment with you was enjoyable, the singing, music and talking all smoothed out the drive and made it feel like a 25 min cruise. I wouldnt have wanted to go to a Spa with anyone else, as this was my first time it was perfect with you.',
+                folder: 'karlovy-vary'
+            },
+            'qatar': {
+                title: 'Qatar',
+                description: 'The closest weve both come to witnessing war first-hand, honestly a little surreal that we felt the explosions vibrating the windows.',
+                folder: 'qatar'
+            },
+            'museum-prague': {
+                title: 'Museum in Prague',
+                description: 'Looking at the history of animals was interesting, but seeing your happiness was the best part.',
+                folder: 'museum-prague'
+            },
+            'high-together': {
+                title: 'High together',
+                description: 'First time trying weed together, I have always been a little uncomfortable getting super high infront of people, even my closest of friends, but when I had that experience with you my guard fully dropped, it was one of the most beautiful and touching moments of my entire life, its as if I looked at you and fell in-love with you all over again, but a million times more intensely.',
+                folder: 'high-together'
+            },
+            'random-prague-pics': {
+                title: 'Random Prague pics',
+                description: 'Some random prague pics',
+                folder: 'random-prague-pics'
+            },
+            'first-chat': {
+                title: 'First Chat',
+                description: 'The very beginning - our first conversation that started it all',
+                folder: 'first-chat'
+            }
+        };
+
+        // Function to load images, videos, and music from folder using index.json
+        async function loadImagesFromFolder(folderName) {
+            try {
+                console.log(`Loading media for ${folderName}...`);
+                const response = await fetch(`memories/${folderName}/index.json`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load index.json for ${folderName}`);
+                }
+                
+                const data = await response.json();
+                console.log(`Media data loaded for ${folderName}:`, data);
+                
+                const result = { images: [], videos: [], music: null };
+                
+                // Load images
+                if (data.images) {
+                    for (const imageData of data.images) {
+                        result.images.push({
+                            src: `memories/${folderName}/${imageData.filename}`,
+                            caption: imageData.caption,
+                            type: 'image'
+                        });
+                    }
+                }
+                
+                // Load videos
+                if (data.videos) {
+                    for (const videoData of data.videos) {
+                        result.videos.push({
+                            src: `memories/${folderName}/${videoData.filename}`,
+                            caption: videoData.caption,
+                            type: 'video'
+                        });
+                    }
+                }
+                
+                // Check if there's music data
+                if (data.music) {
+                    result.music = {
+                        src: `memories/${folderName}/${data.music.filename}`,
+                        caption: data.music.caption
+                    };
+                }
+                
+                console.log(`Result for ${folderName}:`, result);
+                return result;
+            } catch (error) {
+                console.error(`Error loading media for ${folderName}:`, error);
+                // Fallback for local development (CORS issues)
+                console.log(`Using fallback data for ${folderName}`);
+                return getFallbackDataForFolder(folderName);
+            }
+        }
+
+        // Fallback data for local development (CORS issues with file:// protocol)
+        function getFallbackDataForFolder(folderName) {
+            const fallbackData = {
+                'date-foggy-prague': {
+                    images: [{
+                        src: `memories/${folderName}/Seeing Kazakh people in Prague for the first time ;o.jpg`,
+                        caption: 'Seeing Kazakh people in Prague for the first time ;o',
+                        type: 'image'
+                    }],
+                    videos: [], music: null
+                },
+                'days-before-meeting': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/In the uber on the way to your place (I was getting nervous as the time started ticking).jpg`,
+                            caption: 'In the uber on the way to your place (I was getting nervous as the time started ticking)',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/Us on FT before you were heading out.jpg`,
+                            caption: 'Us on FT before you were heading out',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                },
+                'europa-park': {
+                    videos: [{
+                        src: `memories/${folderName}/First 'ride' we went on in Europa park (prob most romantic moment).MOV`,
+                        caption: 'First \'ride\' we went on in Europa park (prob most romantic moment)',
+                        type: 'video'
+                    }],
+                    images: [], music: null
+                },
+                'first-car-together': {
+                    videos: [{
+                        src: `memories/${folderName}/I was thinking in this moment (I want to experience this forever), even though I didn't show it, this was a super emotional moment.MOV`,
+                        caption: 'I was thinking in this moment (I want to experience this forever), even though I didn\'t show it, this was a super emotional moment',
+                        type: 'video'
+                    }],
+                    images: [], music: null
+                },
+                'first-tiktok': {
+                    videos: [
+                        {
+                            src: `memories/${folderName}/I still remember flexing the hell outta these vids sending to all my friends he.MOV`,
+                            caption: 'I still remember flexing the hell outta these vids sending to all my friends he',
+                            type: 'video'
+                        },
+                        {
+                            src: `memories/${folderName}/This is my fav winter outfit of yours.MOV`,
+                            caption: 'This is my fav winter outfit of yours',
+                            type: 'video'
+                        }
+                    ],
+                    images: [], music: null
+                },
+                'first-time-prague': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/Love..jpg`,
+                            caption: 'Love..',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/True happiness.jpg`,
+                            caption: 'True happiness',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                },
+                'high-together': {
+                    videos: [{
+                        src: `memories/${folderName}/high asf.mp4`,
+                        caption: '#Fried',
+                        type: 'video'
+                    }],
+                    images: [],
+                    music: {
+                        src: `memories/${folderName}/virtual_riot_idols.mp3`,
+                        caption: 'I looked into your eyes as you started crying, my soul was weak.'
+                    }
+                },
+                'karlovy-vary': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/Even at this moment you took EVERYONES attention, not just mine.jpg`,
+                            caption: 'Even at this moment you took EVERYONES attention, not just mine',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/Looking at some jewellery ;0.jpg`,
+                            caption: 'Looking at some jewellery ;0',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/Salt room & Massages in Olympic Palace.jpg`,
+                            caption: 'Salt room & Massages in Olympic Palace',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/Tipsy, just before heading out with you (you looked STUNNING), and around this time we called Kuralai and spoke to her briefly.jpg`,
+                            caption: 'Tipsy, just before heading out with you (you looked STUNNING), and around this time we called Kuralai and spoke to her briefly',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                },
+                'museum-prague': {
+                    images: [{
+                        src: `memories/${folderName}/Ngl this was one of the most content moments of our relationship.jpg`,
+                        caption: 'Ngl this was one of the most content moments of our relationship',
+                        type: 'image'
+                    }],
+                    videos: [], music: null
+                },
+                'qatar': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/2 hrs after bombs were dropping.jpg`,
+                            caption: '2 hrs after bombs were dropping',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/The 'first date' roleplay we did this night felt real.jpg`,
+                            caption: 'The \'first date\' roleplay we did this night felt real',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                },
+                'random-prague-pics': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/The leather jacket day.jpg`,
+                            caption: 'The leather jacket day',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/They scammed us with the Dubai chocolate.jpg`,
+                            caption: 'They scammed us with the Dubai chocolate',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                },
+                'thailand': {
+                    images: [{
+                        src: `memories/${folderName}/Boat trip w my zhanym.jpg`,
+                        caption: 'Boat trip w my zhanym',
+                        type: 'image'
+                    }],
+                    videos: [
+                        {
+                            src: `memories/${folderName}/At Esma's place before heading out (pizza was mid ngl).MP4`,
+                            caption: 'At Esma\'s place before heading out (pizza was mid ngl)',
+                            type: 'video'
+                        },
+                        {
+                            src: `memories/${folderName}/B4 Illuzion.MOV`,
+                            caption: 'B4 Illuzion',
+                            type: 'video'
+                        },
+                        {
+                            src: `memories/${folderName}/Your hair here mesmerised me.MOV`,
+                            caption: 'Your hair here mesmerised me',
+                            type: 'video'
+                        }
+                    ],
+                    music: null
+                },
+                'valencia': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/In Love.jpg`,
+                            caption: 'In Love',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/One of our first ever pics together taken by someone else.jpg`,
+                            caption: 'One of our first ever pics together taken by someone else',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/Selfie by the beach.jpg`,
+                            caption: 'Selfie by the beach',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/This ones my favorite.jpg`,
+                            caption: 'This ones my favorite',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                },
+                'washing-cars': {
+                    videos: [{
+                        src: `memories/${folderName}/Cutie.MOV`,
+                        caption: 'Cutie',
+                        type: 'video'
+                    }],
+                    images: [], music: null
+                },
+                'first-chat': {
+                    images: [
+                        {
+                            src: `memories/${folderName}/first.png`,
+                            caption: 'First message ever sent, we were even together in your room here',
+                            type: 'image'
+                        },
+                        {
+                            src: `memories/${folderName}/second.png`,
+                            caption: 'We messaged on snap the next day, after adding eachother from telegram because you didnt use it',
+                            type: 'image'
+                        }
+                    ],
+                    videos: [], music: null
+                }
+            };
+            
+            return fallbackData[folderName] || { images: [], videos: [], music: null };
+        }
+
+        async function openMemoryDetail(memoryId) {
+            const memory = memoryData[memoryId];
+            if (!memory) return;
+
+            // Hide memories app
+            document.getElementById('memoriesApp').classList.remove('show');
+            
+            // Update detail view content
+            document.getElementById('memoryDetailTitle').textContent = memory.title;
+            
+            const content = document.getElementById('memoryDetailContent');
+            
+            // Show loading state
+            content.innerHTML = `
+                <div class="memory-detail-header">
+                    <h3>${memory.title}</h3>
+                    <p>${memory.description}</p>
+                </div>
+                <div class="memory-pictures-container">
+                    <div style="text-align: center; padding: 40px; color: #666;">
+                        Loading images...
+                    </div>
+                </div>
+            `;
+            
+            // Show detail view
+            document.getElementById('memoryDetailApp').classList.add('show');
+            
+            // Load images and music from folder
+            try {
+                const data = await loadImagesFromFolder(memory.folder);
+                
+                let contentHTML = `
+                    <div class="memory-detail-header">
+                        <h3>${memory.title}</h3>
+                        <p>${memory.description}</p>
+                    </div>
+                `;
+                
+                // Add music player if available
+                if (data.music) {
+                    contentHTML += `
+                        <div class="memory-music-player">
+                            <div class="memory-music-caption">${data.music.caption}</div>
+                            <div class="memory-music-controls">
+                                <button class="memory-music-play-btn" onclick="playMemoryMusic('${data.music.src}', this)">
+                                    ▶️
+                                </button>
+                                <div class="memory-music-info">
+                                    <div class="memory-music-title">Virtual Riot - Idols</div>
+                                    <div class="memory-music-artist">Our soundtrack</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                contentHTML += '<div class="memory-pictures-container">';
+                
+                // Combine images and videos into one array for display
+                const allMedia = [...(data.images || []), ...(data.videos || [])];
+                
+                if (allMedia.length > 0) {
+                    contentHTML += allMedia.map(media => {
+                        if (media.type === 'video') {
+                            return `
+                                <div class="memory-picture-item">
+                                    <div class="memory-picture">
+                                        <video controls preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
+                                            <source src="${media.src}" type="video/mp4">
+                                            <source src="${media.src}" type="video/quicktime">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="memory-picture-caption">${media.caption}</div>
+                                </div>
+                            `;
+                        } else {
+                            return `
+                                <div class="memory-picture-item">
+                                    <div class="memory-picture">
+                                        <img src="${media.src}" alt="${media.caption}" loading="lazy" />
+                                    </div>
+                                    <div class="memory-picture-caption">${media.caption}</div>
+                                </div>
+                            `;
+                        }
+                    }).join('');
+                } else {
+                    contentHTML += `
+                        <div class="memory-picture-item">
+                            <div class="memory-picture" style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); color: white; font-size: 24px;">
+                                📁
+                            </div>
+                            <div class="memory-picture-caption">No media found in this folder yet. Add your images/videos to memories/${memory.folder}/</div>
+                        </div>
+                    `;
+                }
+                
+                contentHTML += '</div>';
+                content.innerHTML = contentHTML;
+                
+            } catch (error) {
+                console.error('Error loading memory data:', error);
+            }
+        }
+
+        // Memory music player functionality
+        let memoryMusicAudio = null;
+
+        function playMemoryMusic(src, button) {
+            // Stop any currently playing memory music
+            if (memoryMusicAudio && !memoryMusicAudio.paused) {
+                memoryMusicAudio.pause();
+                document.querySelectorAll('.memory-music-play-btn').forEach(btn => {
+                    btn.textContent = '▶️';
+                    btn.classList.remove('playing');
+                });
+            }
+            
+            // If clicking the same button that's playing, just stop
+            if (memoryMusicAudio && memoryMusicAudio.src.includes(src) && button.classList.contains('playing')) {
+                memoryMusicAudio.pause();
+                button.textContent = '▶️';
+                button.classList.remove('playing');
+                return;
+            }
+            
+            // Create new audio instance
+            memoryMusicAudio = new Audio(src);
+            
+            memoryMusicAudio.addEventListener('ended', function() {
+                button.textContent = '▶️';
+                button.classList.remove('playing');
+            });
+            
+            memoryMusicAudio.addEventListener('error', function() {
+                showNotification('Audio Error', 'Could not load the music file. Make sure it exists in the memory folder.');
+                button.textContent = '▶️';
+                button.classList.remove('playing');
+            });
+            
+            // Play the music
+            memoryMusicAudio.play();
+            button.textContent = '⏸️';
+            button.classList.add('playing');
+        }
+
+        function backToMemories() {
+            // Stop any playing memory music
+            if (memoryMusicAudio && !memoryMusicAudio.paused) {
+                memoryMusicAudio.pause();
+            }
+            
+            // Hide detail view
+            document.getElementById('memoryDetailApp').classList.remove('show');
+            
+            // Show memories app
+            document.getElementById('memoriesApp').classList.add('show');
+        }
+
+        // Browser Tab Functions
+        const browserTabs = [
+            { url: 'https://aigera.party', site: 'aigera.party' },
+            { url: 'https://aigera.love', site: 'aigera.love' },
+            { url: 'https://aigera.baby', site: 'aigera.baby' },
+            { url: 'https://aigera.net', site: 'aigera.net' }
+        ];
+
+        function switchTab(tabIndex) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.browser-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            document.querySelector(`[data-tab="${tabIndex}"]`).classList.add('active');
+            
+            // Hide all website content
+            document.querySelectorAll('.website-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show the selected website content
+            const selectedSite = browserTabs[tabIndex].site;
+            document.querySelector(`[data-site="${selectedSite}"]`).classList.add('active');
+            
+            // Update address bar
+            document.getElementById('browserUrl').textContent = browserTabs[tabIndex].url;
         }
     </script>
 </body>

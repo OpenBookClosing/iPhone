@@ -1,0 +1,24 @@
+{
+  "images": [
+    {
+      "filename": "bubbling_hotpot.jpg",
+      "caption": "The bubbling hotpot between us"
+    },
+    {
+      "filename": "using_chopsticks.png",
+      "caption": "Learning to use chopsticks properly"
+    },
+    {
+      "filename": "testing_spicy.jpg",
+      "caption": "Testing how spicy we could handle"
+    },
+    {
+      "filename": "cooking_meat.png",
+      "caption": "Cooking the perfect pieces of meat"
+    },
+    {
+      "filename": "delicious_bites.jpg",
+      "caption": "Enjoying every delicious bite together"
+    }
+  ]
+}

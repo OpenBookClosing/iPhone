@@ -1,0 +1,20 @@
+{
+  "images": [
+    {
+      "filename": "complex_simulation.png",
+      "caption": "Building the complex iPhone simulation"
+    },
+    {
+      "filename": "taking_forever.jpg",
+      "caption": "This was taking much longer than expected"
+    },
+    {
+      "filename": "running_out_time.png",
+      "caption": "Slowly running out of time"
+    },
+    {
+      "filename": "perfectionist_mode.jpg",
+      "caption": "Every detail had to be perfect"
+    }
+  ]
+}

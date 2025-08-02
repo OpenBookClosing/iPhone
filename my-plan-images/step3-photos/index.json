@@ -1,0 +1,20 @@
+{
+  "images": [
+    {
+      "filename": "hundreds_of_photos.jpg",
+      "caption": "Crawling through hundreds of our pictures"
+    },
+    {
+      "filename": "selecting_main_ones.png",
+      "caption": "Getting some of the main ones"
+    },
+    {
+      "filename": "splitting_categories.jpg",
+      "caption": "Splitting them into categories"
+    },
+    {
+      "filename": "writing_captions.png",
+      "caption": "Writing captions for each one"
+    }
+  ]
+}

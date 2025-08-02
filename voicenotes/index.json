@@ -1,0 +1,16 @@
+{
+  "voicenotes": [
+    {
+      "title": "First Attempt",
+      "filename": "fail.ogg",
+      "duration": "0:30",
+      "icon": "🤫"
+    },
+    {
+      "title": "Final Message", 
+      "filename": "last.ogg",
+      "duration": "1:15",
+      "icon": "💕"
+    }
+  ]
+}

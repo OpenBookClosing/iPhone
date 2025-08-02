@@ -1,0 +1,24 @@
+{
+  "images": [
+    {
+      "filename": "gym_sessions.jpg",
+      "caption": "Working out together at the gym"
+    },
+    {
+      "filename": "morning_runs.png",
+      "caption": "Early morning runs side by side"
+    },
+    {
+      "filename": "healthy_meals.jpg",
+      "caption": "Preparing healthy meals together"
+    },
+    {
+      "filename": "fitness_goals.png",
+      "caption": "Supporting each other's fitness goals"
+    },
+    {
+      "filename": "progress_photos.jpg",
+      "caption": "Taking progress photos together"
+    }
+  ]
+}

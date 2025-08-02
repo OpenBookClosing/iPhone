@@ -1,0 +1,20 @@
+{
+  "images": [
+    {
+      "filename": "project_creation.png",
+      "caption": "Decided on mobile simulation on 16th"
+    },
+    {
+      "filename": "quality_over_deadline.jpg",
+      "caption": "Choosing quality over deadline"
+    },
+    {
+      "filename": "wouldnt_present_imperfect.png",
+      "caption": "Wouldn't present anything less than perfect"
+    },
+    {
+      "filename": "better_late_than_broken.jpg",
+      "caption": "Better late and flawless than rushed and broken"
+    }
+  ]
+}

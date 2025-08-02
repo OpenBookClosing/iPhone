@@ -1,0 +1,20 @@
+{
+  "images": [
+    {
+      "filename": "30_hours_left.png",
+      "caption": "Only 30 hours left until your birthday"
+    },
+    {
+      "filename": "keeping_secret.jpg",
+      "caption": "Having to keep everything completely secret"
+    },
+    {
+      "filename": "time_pressure.png",
+      "caption": "The pressure was building with each hour"
+    },
+    {
+      "filename": "balancing_act.jpg",
+      "caption": "Balancing time with you and development"
+    }
+  ]
+}
